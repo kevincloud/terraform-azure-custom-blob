@@ -14,8 +14,5 @@ resource "azurerm_storage_account" "blob-store" {
     account_replication_type    = "LRS"
     account_tier                = "Standard"
 
-    tags = {
-        environment = "Dev"
-        Key = "DoNotDelete"
-    }
+    tags = var.tags
 }
